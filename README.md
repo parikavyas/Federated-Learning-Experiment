@@ -15,8 +15,8 @@ Once the Models are trained and saved locally, the server will be updated with t
 6.	Sending Status Signal to Main Server by navigating to http://localhost:8001/sendstatus & http://localhost:8002/sendstatus 
 Once the client servers send the signal, there will be a response from the main server
 7.	Sending Trained models to the secure aggregator server for model aggregation by navigating to http://localhost:8001/sendmodel & http://localhost:8001/sendmodel
-8.	The secure aggregator will aggregate the model and build a global model http://localhost:8003/aggregate_models
-9.	The secure aggregator will generate an aggregated model which is sent to the main server by navigating to http://localhost:8003/send_model_secagg
+8.	The secure aggregator will aggregate the model and build an aggregate model http://localhost:8003/aggregate_models The main server can't see the models from the devices. The secure aggregator is a trusted 3rd party where the model aggregation is done.
+9.	The secure aggregator will send this aggregated model to the main server by navigating to http://localhost:8003/send_model_secagg
 10.	This aggregated model is sent by the main server to the client servers by navigating to http://localhost:8000/send_model_clients
 11.	Measure the model performances 
 Next Steps: 
